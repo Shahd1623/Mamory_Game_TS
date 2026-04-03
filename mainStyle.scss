@@ -6,28 +6,30 @@ html {
 }
 
 body {
-    background: url(./assets/brain.jpg);
-    background-size: 30% auto;
-    background-position: center;
-    color: white;
-    height: 100vh;
+    background: url(./assets/bg.jpg);
+  
+    background: url("./assets/bg.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #0e4ea9;
+
 }
 
 #content {
-    text-align: center;
+    background: rgba(0, 25, 76, 0.557);
+    border-radius: 16px;
+    padding: 20px;
     margin-top: 5%;
-    padding: 10px;
-    text-shadow: 0px 4px 3px $primary, 0px 8px 13px $primary, 0px 18px 23px $primary;
-    background-color: #ffffffbf;
-    opacity: 0.9;
-    color: blue;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 
 .row {
     margin: auto 0;
 }
-
 
 .card {
     position: relative;
@@ -36,11 +38,18 @@ body {
     align-items: center;
     font-size: 85px;
     color: white;
+    border-radius: 12px;
+    cursor: pointer;
 
     &-content {
-        height: $card-content-height;
-        font-size: 85px;
+       height: $card-content-height;
+        font-size: 50px;
         position: absolute;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &-image {
@@ -52,6 +61,7 @@ body {
         perspective: 1000px;
         width: 100%;
         height: $card-height;
+        margin-bottom: 10px;
 
     }
 }

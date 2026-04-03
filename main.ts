@@ -143,7 +143,7 @@ prepare.cards.sort((a, b) => a.id > b.id ? 1 : -1);
 
 prepare.cards.forEach((item, index) => {
     cardsHtmlContent += 
-    `<span class="col-sm-3 col-lg-2">
+    `<span class="col-4 col-md-3 col-lg-2">
         <!-- Card flip -->
             <div onclick="toggleFlip(${index})" class="card-flip">
             <div id="card-flip-${index}">

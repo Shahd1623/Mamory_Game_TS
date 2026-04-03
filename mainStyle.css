@@ -11984,21 +11984,22 @@ html {
 }
 
 body {
-  background: url(./assets/brain.jpg);
-  background-size: 30% auto;
-  background-position: center;
-  color: white;
-  height: 100vh;
+  background: url(./assets/bg.jpg);
+  background: url("./assets/bg.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #0e4ea9;
 }
 
 #content {
-  text-align: center;
+  background: rgba(0, 25, 76, 0.557);
+  border-radius: 16px;
+  padding: 20px;
   margin-top: 5%;
-  padding: 10px;
-  text-shadow: 0px 4px 3px #007bff, 0px 8px 13px #007bff, 0px 18px 23px #007bff;
-  background-color: rgba(255, 255, 255, 0.7490196078);
-  opacity: 0.9;
-  color: blue;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .row {
@@ -12012,11 +12013,18 @@ body {
   align-items: center;
   font-size: 85px;
   color: white;
+  border-radius: 12px;
+  cursor: pointer;
 }
 .card-content {
   height: 120px;
-  font-size: 85px;
+  font-size: 50px;
   position: absolute;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card-image {
   height: 120px;
@@ -12026,6 +12034,7 @@ body {
   perspective: 1000px;
   width: 100%;
   height: 130px;
+  margin-bottom: 10px;
 }
 
 .flip {

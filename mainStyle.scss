@@ -1,0 +1,91 @@
+@import "./node_modules/bootstrap/scss/bootstrap.scss";;
+@import "./variables";
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url(./assets/brain.jpg);
+    background-size: 30% auto;
+    background-position: center;
+    color: white;
+    height: 100vh;
+}
+
+#content {
+    text-align: center;
+    margin-top: 5%;
+    padding: 10px;
+    text-shadow: 0px 4px 3px $primary, 0px 8px 13px $primary, 0px 18px 23px $primary;
+    background-color: #ffffffbf;
+    opacity: 0.9;
+    color: blue;
+}
+
+
+.row {
+    margin: auto 0;
+}
+
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 85px;
+    color: white;
+
+    &-content {
+        height: $card-content-height;
+        font-size: 85px;
+        position: absolute;
+    }
+
+    &-image {
+        height: $card-content-height;
+        width: 100%;
+    }
+
+    &-flip {
+        perspective: 1000px;
+        width: 100%;
+        height: $card-height;
+
+    }
+}
+
+.flip {
+    transform: rotateY(180deg);
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: $card-height;
+}
+
+.front,.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $card-height;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.progress {
+    margin-bottom: 10px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
